@@ -14,7 +14,6 @@ public class Mahjong {
     private static final int NUM_TYPES = 9;
     private static final int NUM_CARDS = 14;
 
-    private List<Integer> cards;
     private int[] counters;
 
     // Pre:
@@ -26,15 +25,9 @@ public class Mahjong {
         if (s.length() != NUM_CARDS) {
             throw new IllegalArgumentException();
         }
-        this.cards = new ArrayList<>();
         this.counters = new int[NUM_TYPES];
         for (char c : s.toCharArray()) {
             this.counters[Character.getNumericValue(c) - 1]++;
-        }
-        for (int i = 0; i < NUM_TYPES; i++) {
-            for (int j = 0; j < this.counters[i]; j++) {
-                this.cards.add(i+1);
-            }
         }
     }
 
@@ -88,9 +81,15 @@ public class Mahjong {
 
     // Post:
     //  - Returns a String representation of the Mahjong hand, sorted by
-    //      natrual order.
+    //      natural order.
     @Override
     public String toString() {
-        return this.cards.toString();
+        String result = "";
+        for (int i = 0; i < NUM_TYPES; i++) {
+            for (int j = 0; j < this.counters[i]; j++) {
+                result += (i+1);
+            }
+        }
+        return result;
     }
 }
