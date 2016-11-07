@@ -4,7 +4,7 @@
 // Mahjong
 //
 // A Java class that maintains a hand of Mahjong (cards represented by
-// digits 0-9) and is capable of judging whether the hand can win by a full
+// digits 1-9) and is capable of judging whether the hand can win by a full
 // flush (with isFullFlush()).
 
 public class Mahjong {
@@ -16,7 +16,7 @@ public class Mahjong {
 
     // Pre:
     //  - "s" should be a string of length 14 consisting only of digits from
-    //      0-9.
+    //      1-9.
     // Post:
     //  - Constructs a Mahjong hand consisting of all digits in "s".
     public Mahjong(String s) {
