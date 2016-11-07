@@ -7,8 +7,6 @@
 // digits 0-9) and is capable of judging whether the hand can win by a full
 // flush (with isFullFlush()).
 
-import java.util.*;
-
 public class Mahjong {
 
     private static final int NUM_TYPES = 9;
@@ -92,4 +90,5 @@ public class Mahjong {
         }
         return result;
     }
+
 }
