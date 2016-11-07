@@ -1,5 +1,13 @@
-import java.util.ArrayList;
-import java.util.List;
+// Kaicheng (Kyle) Yan
+// November 7, 2016
+//
+// Mahjong
+//
+// A Java class that maintains a hand of Mahjong (cards represented by
+// digits 0-9) and is capable of judging whether the hand can win by a full
+// flush (with isFullFlush()).
+
+import java.util.*;
 
 public class Mahjong {
 
