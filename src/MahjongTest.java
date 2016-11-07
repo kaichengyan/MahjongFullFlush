@@ -10,6 +10,7 @@ public class MahjongTest {
         Mahjong mj = new Mahjong(input.nextLine());
         System.out.println(mj);
         System.out.println(mj.isFullFlush());
+        System.out.println(mj);
     }
 
 }

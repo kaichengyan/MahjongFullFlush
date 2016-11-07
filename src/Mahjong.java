@@ -42,14 +42,18 @@ public class Mahjong {
                 this.counters[i]--;
                 this.counters[i+1]--;
                 this.counters[i+2]--;
-                if (this.isFullFlush()) result = true;
+                if (this.isFullFlush()) {
+                    result = true;
+                }
                 this.counters[i]++;
                 this.counters[i+1]++;
                 this.counters[i+2]++;
             }
             if (this.counters[i] >= 3) {
                 this.counters[i] -= 3;
-                if (this.isFullFlush()) result = true;
+                if (this.isFullFlush()) {
+                    result = true;
+                }
                 this.counters[i] += 3;
             }
         }
@@ -71,8 +75,12 @@ public class Mahjong {
     private boolean remainsAPair() {
         int pairCounts = 0;
         for (int count : this.counters) {
-            if (count != 0 && count != 2) return false;
-            if (count == 2) pairCounts++;
+            if (count != 0 && count != 2) {
+                return false;
+            }
+            if (count == 2) {
+                pairCounts++;
+            }
         }
         return pairCounts == 1;
     }
